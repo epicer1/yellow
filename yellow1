@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html class="ie9"> <![endif]-->
+<!--[if !IE 9]><!--><html><!--<![endif]--><head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"06034fb5df","applicationID":"113375","transactionName":"cwoMEkFaDVpUFBkHCEQcTQ5cWAQZWAhSARk=","queueTime":0,"applicationTime":159,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<script src="//assets4.sumdog.com/web/iframe_child-50809f7e32f9ddc5b047afb2d5794da4a166b2ec822a89300cf57bd7c00113e2.js"></script>
+<script>
+  var rootUrl = "https://www.sumdog.com/";
+  if (window == top) {
+    var anchor = encodeURIComponent(location.hash.slice(1));
+    var new_url = "https://www.sumdog.com/city_container?target=city" + '&anchor=' + anchor;
+  
+    self.location.href = new_url;
+  } else {
+    rewriteUrl({path: window.location.pathname});
+  }
+</script>
+
+<title>Sumdog</title>
+<link rel="stylesheet" media="all" href="//assets4.sumdog.com/web/common/common-71cd66d654f7ea9fbb7a917fff3ac279f6c435a0b930d1f0edda59ea0e66a106.css" />
+<link rel="stylesheet" media="all" href="//assets0.sumdog.com/email/development/fonts/sumdog/sumdog-font.css" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" />
+<link rel="stylesheet" media="all" href="//assets4.sumdog.com/web/hangout-aadc082746c78f227d8f529296f7b9b776f5d02e6ca50f3426c0eff988be30dc.css" />
+<link rel="stylesheet" media="all" href="//assets4.sumdog.com/web/hangout_vendor-019b6680470b4941d9e7ee669dac7c638fff6f724506a0f802b2e91b896c6264.css" />
+<link rel="stylesheet" media="all" href="//assets4.sumdog.com/web/angular-qa-parser-3faf165937e4c1e364a40ef5fbfced89fade1a798e997a731711ad1b113cfd74.css" />
+<link rel="stylesheet" media="all" href="//assets4.sumdog.com/web/city-e399fcbd6c58ab5769493a993a727539472e81b94de10357d8385c07582389aa.css" />
+<link rel="stylesheet" media="all" href="//assets4.sumdog.com/web/reports-3e8f2e719288349b7e1e30e5cd4fb41741c7fe0af9184936b02386d2db14c5a6.css" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Knewave|Overlock:900,900italic|Passion+One:700,900,400|Titan+One|Bowlby+One|Lemon|Carter+One|Kalam:700|Kurale|Ranchers" />
+<script src="//assets4.sumdog.com/web/application-08aa1c063b885782b30cdf3f29a59bc784f27781f9af7e7cb12d682cf8374682.js"></script>
+<script src="//assets4.sumdog.com/web/path_helpers-24dbe9fbfae70bfaa87523814d5ee1f8942ecb8c13fa4f42e07fd9a684aa0104.js"></script>
+<script src="//assets4.sumdog.com/web/translations-326d5e705cc00cc0263ae2478aa5df95c87f1691a1f0c15595933e2f588db351.js"></script>
+<script src="//assets4.sumdog.com/web/3rd_party/swfobject/swfobject-790fb04d29e4af7ff319afaa5929881555bbe4501afec38f792efd4aa5ced133.js"></script>
+<script src="//assets4.sumdog.com/web/avatar/flambe-bb9998de5fd25c794689a040874cfb07c589219b36d99b156adc700914aa9d9a.js"></script>
+<script src="//assets4.sumdog.com/web/hangout_vendor-1ebed4abc3d9025e2e99dc99d8d8f3effcf1339588644740548544970abe472d.js"></script>
+<script src="//assets4.sumdog.com/web/student-fd2b13e331045465a483bbe9a3fac908f905a648aa2c986044d251b549976030.js"></script>
+<script src="//assets4.sumdog.com/web/city-110d08a0cab45f69133359d9911b4bdc8c3d602532fee11b33594535de7318fc.js"></script>
+<script src="//assets4.sumdog.com/web/charts_dependencies-5e802a11c2f8f0c47cdada69e3699217e7da55c0da8871bde12e446576c298c8.js"></script>
+<script src="//assets4.sumdog.com/web/charts-84d857db6389a064922a71539dd878b6a6851d4b1c1dad2be2ff598a3a285b7d.js"></script>
+<!-- :javascript -->
+<!-- $(function() { -->
+<!-- FastClick.attach(document.body); -->
+<!-- }); -->
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Xs/6A1wzSkffis6F4+W23AB93Z1rzF8WNqbyDedNSfDXcO0uSwldAzi6TGD5ro6JCVZKf49d8Q3DVR1MzuPtkQ==" />
+<link href='/favicon.ico' rel='shortcut icon'>
+<link href='https://webgl.sumdog.com/Release/WebGL.a4bc4d13.js' rel='prefetch'>
+<link href='https://webgl.sumdog.com/Release/WebGL.f024f8b1.mem' rel='prefetch'>
+<link href='https://webgl.sumdog.com/Release/WebGL.cbbdf29f.data' rel='prefetch'>
+<link href='https://webgl.sumdog.com/Build/WebGL.data.5b9b87fc.unityweb' rel='prefetch'>
+<link href='https://webgl.sumdog.com/Build/WebGL.wasm.code.6cdd9e9b.unityweb' rel='prefetch'>
+<link href='https://webgl.sumdog.com/Build/WebGL.wasm.framework.d35cd0c3.unityweb' rel='prefetch'>
+<link href='https://webgl.sumdog.com/Build/WebGL.asm.code.c3e0d056.unityweb' rel='prefetch'>
+<link href='https://webgl.sumdog.com/Build/WebGL.asm.memory.ae7a769f.unityweb' rel='prefetch'>
+<link href='https://webgl.sumdog.com/Build/WebGL.asm.framework.3e864de8.unityweb' rel='prefetch'>
+
+
+<meta content='width=1020' name='viewport'>
+
+</head>
+<body>
+<script type='text/javascript'>
+I18n.fallbacks         = true;
+I18n.defaultLocale     = 'en';
+I18n.locale            = 'en';
+I18n.locales["en-AU"] = ["en-AU","en-GB","en"];
+I18n.locales["en-NZ"] = ["en-NZ","en-GB","en"];
+I18n.locales["en-ZA"] = ["en-ZA","en-GB","en"];
+I18n.locales["en"] = ["en"];
+I18n.locales["en-GB"] = ["en-GB","en"];
+</script>
+
+
+<div id='page'>
+
+<div id='content'><div class='hangout' id='hangout'><div class='hangout-guide'></div><div class='hangout-container' unselectable='on'>
+<script>
+  window.us_state = "ga";
+  
+  if (window.parent.loads_this_session == 'undefined' || window.parent.loads_this_session == null) {
+    window.parent.loads_this_session = 0
+  }
+  
+  var page = {
+    $: function(selector) { return selector ? $(selector, page.$el) : page.$el; }
+  };
+  
+  jQuery(function($) {
+    page.$el = $('#hangout');
+  
+    // Set the translation locale for all hangout apps
+    angular.module('hangout')
+      .config([ 'translationsProvider', function(translationsProvider) {
+        translationsProvider.set_locales(["en"]);
+      }])
+  
+    angular.module('hangout.legacy')
+      // Expose some values from the ruby controller to the app
+      .value('legacyConnector', {
+        coins:                     "5,232",
+        first_name:                "Duncan",
+        family_name:               null,
+        house_open:                true,
+        training_skills_available: true,
+        is_guest:                  false,
+        has_pet:                   true,
+        school_name:               "4/5 Academy at Fifth Avenue",
+        region:                    {"code":"US_ga","name":"Georgia"},
+        timezone_offset:           -18000,
+        subject_locales:           {"maths":"en","english":"en","spelling":"en","writing":"en"},
+        dialect:                   "american",
+        year_group:                9,
+        user_type:                 "student",
+        user_id:                   64383085,
+        start_date:                "2018-08-01",
+        period:                    "2018-19",
+        rank:                      "polar_bear",
+        points_for_next_rank:      7500,
+        total_points:              100000,
+        during_school_time:        true,
+        summer_progress:           {"questions_answered":2447,"correct_answers":2219,"items_so_far":0},
+        client_info:               {"type":"web","version":{"major":2,"minor":0,"tiny":0},"details":null,"user_agent_string":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36","webgl_browser":true},
+        show_warmup_activity_link: false
+      })
+      // Expose some of the app services to the page
+      .run([ 'activities', 'games', 'variants', 'opponents', function(activities, games, variants, opponents) {
+        page.activities = activities;
+        page.games      = games;
+        page.variants   = variants;
+        page.opponents  = opponents;
+      }]);
+  
+    // Expose example questions api to skill browser and student home
+    angular.module('example-questions').run([ 'exampleQuestionsApi', function(exampleQuestionsApi) {
+      var example_questions = {
+        api:   exampleQuestionsApi,
+        $pane: page.$('#example_questions')
+      };
+  
+      angular.module('hangout').config([ '$provide', function($provide) {
+        $provide.value('exampleQuestions', example_questions);
+      }]);
+    }]);
+  
+    page.example_questions = angular.bootstrap(
+      $('#example_questions'),
+      [ 'example-questions' ],
+      { strictDi: true }
+    );
+    page.app = angular.bootstrap(
+      page.$('#app'),
+      [ 'hangout' ],
+      { strictDi: true }
+    );
+  
+    page.hangout = new Student.Home.Hangout(page);
+  
+    page.scene = new Student.Home.Scene(page, {
+      avatar:           {"user_id":64383085,"body_with_accessories":"m,initials=DB,top=7,bottom=5,socks=4,shoes=8,topcolour=0xFF9928,bottomcolour=0xCC3300,sockscolour=0x666666,shoescolour=0xFBECD0,unity_bottom=5,unity_shoes=8,unity_socks=13,unity_top=7","head_string":"2:m,hair=1,eyebrows=1,eyes=1,nose=1,mouth=1,skincolour=0xfbe9dd,haircolour=0xff1aa4,head_shape=1,unity_head_shape=https://unity-avatar-assets0.sumdog.com/avatar/editor/head_shape/bald/2/1/cfdff510f3bf.1F.png,unity_head_shape_id=1,unity_expression=https://unity-avatar-assets0.sumdog.com/avatar/editor/head_expressions/2/1/479b4f0f5fd0.1_hap.png,neck=https://unity-avatar-assets0.sumdog.com/avatar/editor/neck/2/9acf95befaad.neckF.png,unity_hair_front_outline=https://unity-avatar-assets0.sumdog.com/avatar/editor/hair/2/2d6bfa25a563.3_f_l.png,unity_hair_front_colour=https://unity-avatar-assets0.sumdog.com/avatar/editor/hair/2/c6b15e27711d.3_f_c.png,unity_hair_back_outline=https://unity-avatar-assets0.sumdog.com/avatar/editor/hair/2/8b94cc8bdd58.3_b_l.png,unity_hair_back_colour=https://unity-avatar-assets0.sumdog.com/avatar/editor/hair/2/b6b64ce75edf.3_b_c.png,unity_hair_id=3,unity_hair_length=short"},
+      is_guest:         false,
+      city:             true,
+      in_app:           false,
+      browser:          "Chrome",
+      version:          "70"
+    });
+  
+    page.cannot_play_game_dialog   = new Student.Home.CannotPlayGameDialog(page)
+  
+    page.parent_restricted_dialog  = new Student.Home.ParentRestrictedDialog(page);
+    page.teacher_restricted_dialog = new Student.Home.TeacherRestrictedDialog(page);
+  
+    page.activity_ended_dialog     = new Student.Home.ActivityEndedDialog(page);
+  
+    page.$el.on('click', '.hangout-panel:has(.offscreen_link a)', function() {
+      window.location.href = $(this).find('.offscreen_link a').attr('href');
+    });
+  
+  });
+</script>
+<script>
+  jQuery(function($) {
+    page.game_launcher = new Student.Home.MathGameLauncher(page);
+  });
+</script>
+<div class='content-mask' unselectable='on'></div>
+<div class='city maths' id='app'><div hangout-content></div><div class='panel-column left'>
+<div sumdog-panel></div>
+<div session-panel></div>
+<div subjects-panel></div>
+<div activity-panels></div>
+<div games-panel></div>
+<div game-settings-panel></div>
+<div house-panel></div>
+</div><div class='scene-container no-right-column'>
+<div class='scene' unselectable='on'>
+<div class='scene-slider'></div>
+<div class='scene-hidden-flash'>
+<div id='hangout_flash'></div>
+</div>
+<div class='scene-flash'></div>
+<div class='scene-input'></div>
+<div class='scene-prev'></div>
+<div class='scene-next'></div>
+<div class='scene-pet' pet setup-options='{idle:false, hasReward:false, hasAllRewards:false}'></div>
+<div class='scene-title'></div>
+</div>
+</div><div class='pet-tricks-disabled' pet-tricks-disabled></div>
+<div class='pet-trick-reward' pet-trick-reward></div>
+<div id='reports'>
+<div progression-status></div>
+</div>
+<div activity-reward class='activity-reward'></div></div>
+<div class='marketing-link'>
+
+</div>
+<div class='example-questions-pane panel-content pane' id='example_questions'>
+<div class='heading'>Example questions</div>
+<div class='content'>
+<div class='view'>
+<div ng-include='"example_questions/templates/_index.html"'></div>
+</div>
+</div>
+<div class='footer'>
+<div pane-video-link></div>
+<div class='spacer'></div>
+<a class='button control close' ng-click='onClose()'>Done</a>
+</div>
+</div><ul class='footer'>
+<li><a onclick="changeUrl({path: &quot;/en/Privacy_Policy&quot;})" href="">Privacy</a></li>
+<li><a onclick="changeUrl({path: &quot;/en/Terms_of_Use&quot;})" href="">Terms of use</a></li>
+</ul>
+</div><div id='activity_ended_dialog'>
+<div class='text'>
+Your current activity has ended. You will automatically play in your next available activity.
+</div>
+</div>
+
+<div id='cannot_play_game_dialog'></div>
+
+<div id='parent_restricted_dialog'><div class='wiki-embed' data-wiki-page-name='Parent_restricted_writing'></div>
+</div>
+
+<div id='teacher_restricted_dialog'><div class='wiki-embed' data-wiki-page-name='Teacher_restricted_writing'></div>
+</div>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-13176158-1', 'auto');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script></div>
+<script>
+  // Generated by CoffeeScript 1.7.1
+  (function() {
+    var $element, handle_messages, hide_message, message, set_message, show_message, timer, total;
+  
+    $element = null;
+  
+    message = null;
+  
+    total = 0;
+  
+    timer = null;
+  
+    $(function() {
+      $element = $('.message-bar');
+      $element.find('.close').click(hide_message);
+      return $.get(Sumdog.paths.api_user_messages_unseen(), handle_messages);
+    });
+  
+    handle_messages = function(data) {
+      var messages;
+      messages = data.messages, total = data.total;
+      if (!(message = messages != null ? messages[0] : void 0)) {
+        return;
+      }
+      return show_message();
+    };
+  
+    show_message = function() {
+      set_message();
+      $element.show();
+      return setTimeout(function() {
+        $element.addClass('open');
+        return timer = setTimeout(hide_message, (message.type === 'NewsItem' ? 60 * 10 : 10) * 1000);
+      }, 2000);
+    };
+  
+    set_message = function() {
+      $element.find('.image').attr({
+        src: message.image
+      });
+      $element.find('.title').html(message.title);
+      $element.find('.description').html(message.description);
+      $element.find('.date').text(message.display_date);
+      return $element.find('.more a').text($element.find('.more a').text().replace(/^\d+/, total - 1));
+    };
+  
+    hide_message = function() {
+      clearTimeout(timer);
+      return $element.removeClass('open').delay(1000 * parseFloat($element.css('transition-duration'))).hide(0);
+    };
+  
+  }).call(this);
+</script>
+<div class='message-bar'>
+<div class='content'>
+<img class='image'>
+<h2 class='title'></h2>
+<div class='description'></div>
+<div class='date'></div>
+<div class='more'><a href="/student/messages">0 more unread messages</a></div>
+<a class='close'>&times;</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+  window.in_mgd_territory = false;
+</script>
+
+
+</body></html>
